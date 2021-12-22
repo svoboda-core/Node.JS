@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<%- include('./partials/haed.ejs') %>
+
+<body>
+	<%- include('./partials/nav.ejs') %>
+	<h1>Posts:</h1>
+	<ul>
+		<% if (posts.length) { %>
+			<% posts.forEach(({ id, text, title, createdAt, author})=> { %>
+				<li>
+					<article>
+						<h2>
+							<a href="/posts/<%= id %>"><%= title %></a>
+						</h2>
+						<p><%= text %></p>
+						<div class="info">
+							<span><%= createdAt.toLocaleDateString() %></span>
+							<span><%= author %></span>
+						</div>
+					</article>
+				</li>
+				<% }) %>
+			<% } %>
+		<li>
+			
+		</li>
+	</ul>
+</body>
+
+</html>

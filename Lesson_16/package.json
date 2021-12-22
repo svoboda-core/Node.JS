@@ -1,0 +1,23 @@
+{
+  "name": "lesson_16",
+  "version": "1.0.0",
+  "description": "node.js",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "node.js"
+  ],
+  "author": "Vasily",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.2",
+    "mongoose": "^6.1.3",
+    "morgan": "^1.10.0"
+  }
+}

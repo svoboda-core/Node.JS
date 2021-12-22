@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<%- include('./partials/haed.ejs') %>
+
+<body>
+	<%- include('./partials/nav.ejs') %>
+	</nav>
+	<article>
+		<div class="info">
+			<span><%= post.createdAt.toLocaleDateString() %></span>
+			<span><%= post.author %></span>
+		</div>
+		<h1><%= post.title %></h1>
+		<p><%= post.text %></p>
+	</article>
+</body>
+
+</html>
