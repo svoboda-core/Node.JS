@@ -65,7 +65,7 @@ app.get('/posts/:id', (reg, res) => {
 		title: 'Post title My first post :)',
 		date: '22.12.2021',
 		author: 'Vasily',
-	}
+	};
 	res
 		.status(200)
 		.render(createPath('post'), { title, post });
@@ -73,16 +73,18 @@ app.get('/posts/:id', (reg, res) => {
 
 app.get('/posts', (reg, res) => {
 	const title = 'Posts'
-	const posts = {
+	const posts = [
+		{
 		id: '1',
 		text: '	Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente quidem provident, dolores, vero laboriosam nemomollitia impedit unde fugit sint eveniet, minima odio **************',
 		title: 'Post title',
 		date: '22.12.2021',
 		author: 'Vasily',
-	}
+		}
+	];
 	res
 		.status(200)
-		.render(createPath('posts'), { posts, title });
+		.render(createPath('posts'), { title, posts });
 });
 
 app.post('/add-post', (reg, res) => {
